@@ -1,0 +1,126 @@
+* { margin: 0;
+padding: 0;
+box-sizing: border-box;}
+
+html, body {
+  height: 100%; /* Assure que le body et le html couvrent toute la fenêtre */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;}
+
+body {  position: relative;
+      font-family: 'Open Sans', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background-color: #f0f8ff;}
+ 
+      /*header*/
+
+      header { background-color:  #007acc;
+        color:#fff ;
+       padding: 20px;
+       text-align: center;
+}  
+
+h1 { margin-bottom: 10px;
+font-weight: bold;}
+
+header h2 { color: #ff7e67;
+text-decoration: underline;
+font-weight: bold;}
+
+
+header p { color: #000;
+}
+
+h1, header h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*navbar*/
+
+#navbar ul { list-style: none;}
+
+#navbar ul li { display: inline;
+margin: 0 15px;}
+
+#navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;}
+
+    #navbar a:hover {
+        text-decoration: underline;
+        color: #ff7e67;
+    }
+
+    /*projects*/
+  
+    #projects {
+        text-align: center;
+        background-color: #fef6e4;
+        padding-bottom: 170px;
+        justify-content: center;
+    }
+
+
+    #projects h2 { color: #007acc;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 1.8rem;}
+
+.btn { display: inline-block;
+padding: 10px 15px;
+background-color: #007acc; color: #fff;
+text-decoration: none;
+border-radius: 8px;
+margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #ff7e67;
+  }
+
+  /*footer*/
+  footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.contact-info {
+    margin-bottom: 10px;
+    }
+
+    .contact-info a { color: #fff;
+    text-decoration: none;}
+    .social-icons a {
+        color: #fff;
+        margin: 0 10px;
+        font-size: 1.5em;
+        transition: color 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        color: #ff7e67;
+      }
+
+      /* Responsive Design */
+@media (max-width: 768px) {
+  
+ 
+    #navbar ul li {
+        
+      
+    display: block;
+    margin: 10px 0;}
+
+    .social-icons a {
+        font-size: 1.2em;
+      }
+    }
