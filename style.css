@@ -58,7 +58,7 @@ margin: 0 15px;}
 
     /*projects*/
   
-    #projects {
+    #Projets {
         text-align: center;
         background-color: #fef6e4;
         padding-bottom: 170px;
@@ -66,7 +66,7 @@ margin: 0 15px;}
     }
 
 
-    #projects h2 { color: #007acc;
+    #projets h2 { color: #007acc;
     margin-bottom: 50px;
     font-weight: bold;
     font-size: 1.8rem;}
