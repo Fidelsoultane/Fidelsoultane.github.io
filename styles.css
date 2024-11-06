@@ -1,149 +1,149 @@
 * { margin: 0; 
-    padding: 0;
-    box-sizing: border-box;}
-    
-    body { font-family: arial,sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f9;}
-    /*style du header*/
-    header { background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;}
-    header h1 { font-size: 2rem;
-    margin-bottom: 10px;
-    }
+  padding: 0;
+  box-sizing: border-box;}
+  
+  body { font-family: arial,sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;}
+  /*style du header*/
+  header { background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;}
+  header h1 { font-size: 2rem;
+  margin-bottom: 10px;
+  }
 
-    header a:hover { color: #e60808;}
-    
-    #about { padding: 50px 20px;
-    background-color: #e9ecef;
-    text-align: center;}
-    
-    #about h2 { font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #333;}
-    
-    #about p { max-width: 600px;
-    margin: 0 auto;
-    font-size: 1rem;
-    color: #555;}
-    
-    /*section prjets*/
-    #projects { padding: 50px 20px;
-    text-align: center;
-    }
-    
-    #projects h2 { font-size: 1.8rem;margin-bottom: 30px;
-    color: #333;}
-    
-    .project-tile { background-color: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);}
-    
-    .project-tile h3 { font-size: 1.4rem;
-    margin-bottom: 10px;}
-    
-    .project-tile p { font-size: 1rem;
-    color: #555;
-    margin-bottom: 15px;}
-    
-    .project-tile a { color: #333;
+  header a:hover { color: #e60808;}
+  
+  #about { padding: 50px 20px;
+  background-color: #e9ecef;
+  text-align: center;}
+  
+  #about h2 { font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;}
+  
+  #about p { max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #555;}
+  
+  /*section prjets*/
+  #projects { padding: 50px 20px;
+  text-align: center;
+  }
+  
+  #projects h2 { font-size: 1.8rem;margin-bottom: 30px;
+  color: #333;}
+  
+  .project-tile { background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);}
+  
+  .project-tile h3 { font-size: 1.4rem;
+  margin-bottom: 10px;}
+  
+  .project-tile p { font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;}
+  
+  .project-tile a { color: #333;
+  text-decoration: none;
+  font-weight: bold;}
+  
+  .project-tile a:hover { color: #007bff;}
+  
+  .project-tile img { max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 10px 0;}
+  
+  /*Gallerie d'images*/
+  
+  #image-gallery { display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform: scale(1.05);
+  }
+  
+  .gallery-img { width: 30%;
+  border-radius:8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);}
+  
+  /*footer*/
+  
+  footer { background-color: #333;
+  color:#fff;
+  text-align:center;
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+  font-size: 0.9rem,
+  }
+  
+  footer p { margin: 0.5rem 0;}
+  
+  .contact-info {
+    margin: 1rem 0;
+  }
+  
+  .contact-info a {
+    color: #ffa500;
     text-decoration: none;
-    font-weight: bold;}
-    
-    .project-tile a:hover { color: #007bff;}
-    
-    .project-tile img { max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin: 10px 0;}
-    
-    /*Gallerie d'images*/
-    
-    #image-gallery { display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-    transform: scale(1.05);
-    }
-    
-    .gallery-img { width: 30%;
-    border-radius:8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);}
-    
-    /*footer*/
-    
-    footer { background-color: #333;
-    color:#fff;
-    text-align:center;
-    margin-top: 2rem;
-    padding: 1.5rem 0;
-    font-size: 0.9rem,
-    }
-    
-    footer p { margin: 0.5rem 0;}
-    
-    .contact-info {
-      margin: 1rem 0;
-    }
-    
-    .contact-info a {
-      color: #ffa500;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-    .contact-info a i {
-      margin-right: 0.5rem;
-    }
-    .contact-info a:hover {
-      color: #ffcc66;
-      text-decoration: underline;
-    }
-    
-    .social-icons { margin: 1rem 0;}
-    
-    .social-icons a { color: #fff;
-    font-size: 1.5rem;
-    margin: 0 10px;
-    transition: color 0.3s;}
-    
-    .social-icons a:hover {
-      color: #ffa500;
-    }
-    
-    
-    footer a {
-      color: #ffa500;
-      text-decoration: none;
-    }
-    
-    footer a:hover {
-      text-decoration: underline;
-    }
+    font-size: 1rem;
+  }
+  .contact-info a i {
+    margin-right: 0.5rem;
+  }
+  .contact-info a:hover {
+    color: #ffcc66;
+    text-decoration: underline;
+  }
+  
+  .social-icons { margin: 1rem 0;}
+  
+  .social-icons a { color: #fff;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s;}
+  
+  .social-icons a:hover {
+    color: #ffa500;
+  }
+  
+  
+  footer a {
+    color: #ffa500;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
 
-    .github a:hover { color: #ffa500;}
-    
-     /* Media Query pour les écrans de moins de 600px */
-            @media (max-width: 600px) {
-                body {
-                    padding: 10px;
-                    font-size: 0.9em; 
-                }
-    
-                h1 {
-                    font-size: 1.8em;
-                }
-    
-                p {
-                    font-size: 1em;
-                    margin-bottom: 0.8em;
-                }
-    
-                footer {
-                    padding: 10px;
-                    font-size: 0.9em;
-                }}
+  .github a:hover { color: #ffa500;}
+  
+   /* Media Query pour les écrans de moins de 600px */
+          @media (max-width: 600px) {
+              body {
+                  padding: 10px;
+                  font-size: 0.9em; 
+              }
+  
+              h1 {
+                  font-size: 1.8em;
+              }
+  
+              p {
+                  font-size: 1em;
+                  margin-bottom: 0.8em;
+              }
+  
+              footer {
+                  padding: 10px;
+                  font-size: 0.9em;
+              }}
