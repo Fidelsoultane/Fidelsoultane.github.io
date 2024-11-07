@@ -26,14 +26,42 @@ padding: 0;}
 #navbar ul li { display: inline;
 margin-right: 15px;}
 
-#navbar a {
-    color: #fff;
+#navbar ul li a {
+    color: #61dafb;
     text-decoration: none;
-    font-weight: bold;}
+    font-weight: bold;
+  position: relative;
+transition: color 0.3s;}
 
-    #navbar a:hover {
-        text-decoration: underline;
-        color: #ff7e67;
+#navbar ul li a::after { content: "";
+position: absolute;
+width: 0;
+height: 2px;
+background-color: #61dafb;
+left: 0;
+box-sizing: -5px;
+transition: width 0.3s ease;}
+
+    #navbar ul li a:hover::after {
+        width: 100%;
+    }
+
+    /* animation de fade-in*/
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #about, #projects {
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
     }
   /*A propos*/
 
@@ -55,7 +83,8 @@ margin-right: 15px;}
   }
   
   #projects h2 { font-size: 1.8rem;
-  color: #333;}
+  color: #333;
+text-align: center;}
 
   .btn { display: inline-block;
     padding: 10px 20px;
@@ -63,10 +92,12 @@ margin-right: 15px;}
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
     }
     
     .btn:hover {
-      background-color: #ff7e67;
+      background-color: #21a1f1;
+      transform: translateY(-3px);
       }
     
   
@@ -126,14 +157,18 @@ margin-right: 15px;}
           text-decoration: none;}
       
           .social-icons a {
-              color: #fff;
-              margin: 0 10px;
-              text-decoration: none;
+            margin: 0 0.5rem;
+            color: #61dafb;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
             }
       
             .social-icons a:hover {
-              color: #ff7e67;
+              color: #21a1f1;
+              transform: scale(1.2);
             }
+
+            .github { text-align: center;}
       
             /* Responsive Design */
       @media (max-width: 600px) {
