@@ -60,6 +60,22 @@ width: 100%;
         background-color: #f9f9f9;
     }
 
+ .btn { display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s, transform 0.3s;
+      position: absolute;
+      top: 30px;
+      left: 120px;
+      }
+      
+      .btn:hover {
+        background-color: #21a1f1;
+        transform: translateY(-2px);
+        }
 
     
     header { text-align: center;
