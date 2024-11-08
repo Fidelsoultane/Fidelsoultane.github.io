@@ -125,6 +125,38 @@ text-align: center;}
   height: auto;
   border-radius: 4px;
   margin: 10px 0;}
+
+  /*section compétence*/
+
+  #skills {
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.skill i {
+    font-size: 2em;
+    color: #ff5722; /* Couleur pour HTML */
+}
+
+.skill:nth-child(2) i {
+    color: #2965f1; /* Couleur pour CSS */
+}
+
   
   /*Gallerie d'images*/
   
