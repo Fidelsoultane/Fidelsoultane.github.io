@@ -5,17 +5,45 @@
   body { font-family: arial,sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
-color: #333;}
+color: #333;
+animation: zoom-page 5s ease-in-out infinite;}
+
+@keyframes zoom-page {
+  
+ 
+  0%, 100% { transform: scale(1); }
+    
+   
+  50% { transform: scale(1.02); }
+}
+
   /*style du header*/
   header { background-color: #333;
   color: #fff;
   padding: 20px;
   text-align: center;}
 
-  header h1 { font-family: 'Montserrat';
-    font-size: 2rem;
-  margin-bottom: 0;
-  }
+  header h1 {  
+      font-size: 2.5em;
+      color: #3498db;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      width: 0;
+      animation: typing 4s steps(40, end) infinite, blink-caret 0.7s step-end infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    
+    @keyframes blink-caret {
+      50% { border-color: transparent; }
+    }
+    
+  
+  
 
 
   /*navbar*/
@@ -42,27 +70,10 @@ left: 0;
 box-sizing: -5px;
 transition: width 0.3s ease;}
 
-    #navbar ul li a:hover::after {
-        width: 100%;
-    }
+#navbar ul li a:hover::after {
+  width: 100%;
+}
 
-    /* animation de fade-in*/
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    #about, #projects {
-      animation: fadeIn 1s ease forwards;
-      opacity: 0;
-    }
   /*A propos*/
 
   #about { padding: 20px;
