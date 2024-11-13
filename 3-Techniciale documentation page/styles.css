@@ -19,9 +19,11 @@ padding: 0;}
     font-size: 24px; 
     padding-top: 1.5em;
     }
-  h1 { text-align: center;
-  background-color: #0e3f5c;
+   h1 {
+     text-align: center;
+     background-color: #0e3f5c;
 color: white;
+padding:  0;
 }
     
    
@@ -122,4 +124,5 @@ footer {
   float: left;
 }
 
-img {margin-left:  50%;}
+img {display: block;
+  margin: 0 auto;}
