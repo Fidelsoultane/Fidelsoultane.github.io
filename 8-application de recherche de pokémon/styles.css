@@ -1,0 +1,105 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #f3f4f6, #d1e9fc);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#container {
+  text-align: center;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+}
+
+h1 {
+  color: #e63946;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #f1faee;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: calc(100% - 40px);
+  margin: 10px 0;
+  border: 2px solid #a8dadc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+button {
+  padding: 10px 20px;
+  background: #457b9d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #1d3557;
+}
+
+p, h2 {
+  margin: 10px 0;
+}
+
+#types span {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 12px;
+  background: #a8dadc;
+  color: #1d3557;
+  font-weight: bold;
+}
+
+img#sprite {
+  margin-top: 20px;
+  width: 150px;
+  height: auto;
+  border: 2px solid #f4a261;
+  border-radius: 50%;
+  animation: pop 0.5s ease-in-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#pokemon-name {
+  font-size: 2em;
+  color: #e63946;
+}
+
+#pokemon-id {
+  font-size: 1.2em;
+  color: #457b9d;
+}
+
+#weight, #height {
+  font-size: 1em;
+  color: #555;
+}
+
+span {
+  font-weight: bold;
+}
+
+  

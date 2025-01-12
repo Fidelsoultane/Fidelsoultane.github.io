@@ -1,14 +1,16 @@
 * { margin: 0; 
-  padding: 0;
-  box-sizing: border-box;}
+    padding: 0;
+    box-sizing: border-box;
+  }
   
   body { font-family: arial,sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-color: #333;
-animation: zoom-page 5s ease-in-out infinite;}
+         line-height: 1.6;
+         background-color: #f4f4f4;
+         color: #333;
+        animation: zoom-page 5s ease-in-out infinite;
+      }
 
-@keyframes zoom-page {
+  @keyframes zoom-page {
   
  
   0%, 100% { transform: scale(1); }
@@ -18,10 +20,11 @@ animation: zoom-page 5s ease-in-out infinite;}
 }
 
   /*style du header*/
-  header { background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;}
+
+header { background-color: #333;
+         color: #fff;
+         padding: 20px;
+         text-align: center;}
 
   header h1 {  
       font-size: 2.5em;
@@ -50,26 +53,30 @@ animation: zoom-page 5s ease-in-out infinite;}
   /*navbar*/
 
 #navbar ul { list-style: none;
-padding: 0;}
+             padding: 0;
+}
 
 #navbar ul li { display: inline;
-margin-right: 15px;}
+                margin-right: 15px;
+}
 
 #navbar ul li a {
-    color: #61dafb;
-    text-decoration: none;
-    font-weight: bold;
-  position: relative;
-transition: color 0.3s;}
+                 color: #61dafb;
+                 text-decoration: none;
+                font-weight: bold;
+                position: relative;
+                transition: color 0.3s;
+              }
 
 #navbar ul li a::after { content: "";
-position: absolute;
-width: 0;
-height: 2px;
-background-color: #61dafb;
-left: 0;
-box-sizing: -5px;
-transition: width 0.3s ease;}
+                         position: absolute;
+                         width: 0;
+                         height: 2px;
+                        background-color: #61dafb;
+                        left: 0;
+                        box-sizing: -5px;
+                        transition: width 0.3s ease;
+                      }
 
 #navbar ul li a:hover::after {
   width: 100%;
@@ -78,27 +85,32 @@ transition: width 0.3s ease;}
   /*A propos*/
 
   #about { padding: 20px;
-  background-color: #e9ecef;
-  text-align: center;}
+           background-color: #e9ecef;
+           text-align: center;
+          }
   
   #about h2 { font-size: 1.8rem;
-  color: #333;}
+              color: #333;
+            }
   
   #about p { 
   font-size: 1rem;
-  color: #555;}
+  color: #555;
+}
   
   /*section prjets*/
 
   #projects { padding: 20px;
-  text-align: center;
+             text-align: center;
   }
   
   #projects h2 { font-size: 1.8rem;
-  color: #333;
-text-align: center;}
+                 color: #333;
+                 text-align: center;
+                }
 
-  .btn { display: inline-block;
+  .btn { 
+    display: inline-block;
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
@@ -108,32 +120,38 @@ text-align: center;}
     }
     
     .btn:hover {
-      background-color: #21a1f1;
-      transform: translateY(-3px);
+    background-color: #21a1f1;
+    transform: translateY(-3px);
       }
     
   
-  .project-tile { background-color: #fff;
+  .project-tile { 
+  background-color: #fff;
   padding: 20px;
   margin: 20px auto;
   max-width: 600px;
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);}
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
   
-  .project-tile h3 { font-size: 1.4rem;
-  margin-bottom: 10px;}
+  .project-tile h3 { 
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
   
   .project-tile p { font-size: 1rem;
   color: #555;
   margin-bottom: 15px;}
   
-  .project-tile a { color: #333;
+  .project-tile a { 
+  color: #333;
   text-decoration: none;
   font-weight: bold;}
   
   .project-tile a:hover { color: #007bff;}
   
-  .project-tile img { max-width: 100%;
+  .project-tile img {
+  max-width: 100%;
   height: auto;
   border-radius: 4px;
   margin: 10px 0;}
@@ -172,14 +190,16 @@ text-align: center;}
   
   /*Gallerie d'images*/
   
-  #image-gallery { display: flex;
+  #image-gallery { 
+  display: flex;
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
   transform: scale(1.05);
   }
   
-  .gallery-img { width: 30%;
+  .gallery-img { 
+  width: 30%;
   border-radius:8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);}
   
@@ -197,7 +217,8 @@ text-align: center;}
           margin: 10px 0;
           }
       
-          .contact-info a { color: #fff;
+          .contact-info a { 
+          color: #fff;
           text-decoration: none;}
       
           .social-icons a {
