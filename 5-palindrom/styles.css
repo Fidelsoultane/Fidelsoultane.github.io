@@ -11,6 +11,29 @@ body {
    flex-direction: column; 
    }
 
+   #navbar  a {
+     color: #61dafb;
+     text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    
+  }
+
+  .btn { 
+     display: inline-block;
+     padding: 10px 20px;
+     background-color: #333;
+     color: #fff;
+     text-decoration: none;
+     border-radius: 5px;
+     transition: background-color 0.3s, transform 0.3s;
+     }
+     
+     .btn:hover {
+       transform: translateY(-3px) rotate(-1deg);
+       transition: background-color 0.3s, transform 0.3s;
+   }
+
 .container {
      text-align: center;
      padding: 20px 30px;
