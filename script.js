@@ -1,131 +1,140 @@
-// Animation sur le titre
 document.addEventListener("DOMContentLoaded", () => {
-    const title = document.querySelector("header h1");
-    title.style.opacity = 0;
-    title.style.transform = "translateY(-20px)";
-    setTimeout(() => {
-      title.style.transition = "all 1s";
-      title.style.opacity = 1;
-      title.style.transform = "translateY(0)";
-    }, 500);
-  });
-  
-  // Bouton retour en haut
-  const backToTop = document.createElement("button");
-  backToTop.textContent = "↑";
-  backToTop.id = "back-to-top";
-  backToTop.style.cssText = `
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: none;
-  `;
-  document.body.appendChild(backToTop);
-  
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      backToTop.style.display = "block";
-    } else {
-      backToTop.style.display = "none";
-    }
-  });
-  
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+  // Animation du titre
+  const title = document.querySelector("header h1");
+  title.classList.add("animate-title");
 
+  // Modale pour les projets
   document.querySelectorAll(".project-tile").forEach((tile) => {
-    tile.addEventListener("click", () => {
-      const modal = document.createElement("div");
-      modal.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      `;
-      const content = document.createElement("div");
-      content.style.cssText = `
-        background: #fff;
-        padding: 20px;
-        max-width: 500px;
-        text-align: center;
-        border-radius: 5px;
-      `;
-      content.innerHTML = `
-        <h2>${tile.querySelector("h3").textContent}</h2>
-        <p>${tile.querySelector("p").textContent}</p>
-        <button id="close-modal" style="margin-top: 10px;">Fermer</button>
-      `;
-      modal.appendChild(content);
-      document.body.appendChild(modal);
-  
-      document.getElementById("close-modal").addEventListener("click", () => {
-        modal.remove();
+      tile.addEventListener("click", () => {
+          const modal = document.createElement("div");
+          const modalTitle = tile.querySelector("h3").textContent; // Récupération directe
+          const modalDescription = tile.querySelector("p").textContent;
+          modal.setAttribute("role", "dialog");
+          modal.setAttribute("aria-modal", "true");
+          modal.setAttribute("aria-labelledby", "modal-title");
+
+          modal.style.cssText = `
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.8);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              z-index: 1001; /* Au-dessus de la barre de progression */
+
+          `;
+
+          const content = document.createElement("div");
+          content.style.cssText = `
+              background: #fff;
+              padding: 20px;
+              max-width: 500px;
+              text-align: center;
+              border-radius: 5px;
+          `;
+
+          content.innerHTML = `
+              <h2 id="modal-title">${modalTitle}</h2>
+              <p>${modalDescription}</p>
+              <button id="close-modal" style="margin-top: 10px;">Fermer</button>
+          `;
+
+          modal.appendChild(content);
+          document.body.appendChild(modal);
+
+          const closeModalButton = document.getElementById("close-modal");
+          closeModalButton.focus(); // Focus sur le bouton
+
+          const closeModal = () => {
+              modal.remove();
+          };
+
+          closeModalButton.addEventListener("click", closeModal);
+
+          modal.addEventListener("click", (event) => {
+              if (event.target === modal) { // Clic en dehors du contenu
+                  closeModal();
+              }
+          });
+
+          document.addEventListener("keydown", (event) => {
+              if (event.keyCode === 27) { // Touche Échap
+                  closeModal();
+              }
+          });
       });
-    });
   });
 
-  const galleryImages = document.querySelectorAll(".gallery-img");
-let currentImageIndex = 0;
+  // Barre de progression
+  const progressBar = document.getElementById("progress-bar");
 
-setInterval(() => {
-    galleryImages[currentImageIndex].style.display = "none";
-    currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-    galleryImages[currentImageIndex].style.display = "block";
-}, 3000);
+  window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progressBar.style.width = scrollPercent + "%";
+  });
 
-const progressBar = document.getElementById("progress-bar");
-
-window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.body.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / docHeight) * 100;
-    progressBar.style.width = scrollPercent + "%";
-});
-
-document.querySelectorAll("#navbar ul li a").forEach((link) => {
-  link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute("href").slice(1);
-      document.getElementById(targetId).scrollIntoView({
-          behavior: "smooth",
-          block: "start",
+  // Défilement fluide vers les ancres
+  document.querySelectorAll(".nav-link").forEach((link) => {
+      link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const targetId = link.dataset.target; // Utilisation de data-target
+          if (targetId) {
+              const targetElement = document.getElementById(targetId);
+              if (targetElement) {
+                  targetElement.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                  });
+              }
+          }
       });
   });
-});
 
-const title = document.querySelector("header h1");
-let text = title.textContent;
-let index = 0;
+  // Effet "Machine à écrire" (une seule fois)
+      const titleElement = document.querySelector("header h1");
+      const text = titleElement.textContent;
+      titleElement.textContent = ""; // On efface
+      let index = 0;
+      let cursorVisible = true;
 
-title.textContent = "";
-const typeWriter = setInterval(() => {
-    if (index < text.length) {
-        title.textContent += text[index];
-        index++;
-    } else {
-        clearInterval(typeWriter);
-        setTimeout(() => {
-            title.textContent = "";
-            index = 0;
-            setInterval(typeWriter, 150);
-        }, 2000);
-    }
-}, 150);
+      const typeWriter = setInterval(() => {
+          if (index < text.length) {
+              titleElement.textContent += text[index];
+              index++;
+          } else {
+             clearInterval(typeWriter);
+          }
+      }, 150);
 
-const toggleDarkMode = document.getElementById("toggle-dark-mode");
-toggleDarkMode.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
+  // Mode Sombre (avec localStorage et icône)
+  const toggleDarkMode = document.getElementById("toggle-dark-mode");
+
+  // Fonction pour mettre à jour le mode et l'icône
+  const updateDarkMode = (isDarkMode) => {
+      if (isDarkMode) {
+          document.body.classList.add("dark-mode");
+          toggleDarkMode.textContent = "☀️"; // Soleil pour le mode clair
+          localStorage.setItem("darkMode", "enabled");
+      } else {
+          document.body.classList.remove("dark-mode");
+          toggleDarkMode.textContent = "🌙"; // Lune pour le mode sombre
+          localStorage.setItem("darkMode", "disabled");
+      }
+  };
+
+  // Au chargement de la page : vérifier localStorage
+  const savedDarkMode = localStorage.getItem("darkMode");
+  updateDarkMode(savedDarkMode === "enabled");
+
+
+  toggleDarkMode.addEventListener("click", () => {
+      const isDarkMode = document.body.classList.contains("dark-mode");
+      updateDarkMode(!isDarkMode); // Inverse le mode
+  });
 });
 

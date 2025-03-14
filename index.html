@@ -1,76 +1,78 @@
 <!doctype html>
 <html lang="fr">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fadel SOULTANE portfolio</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <title>Fadel SOULTANE - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
-
-  </head>
-  <body>
+</head>
+<body>
     <header>
         <h1>Bienvenue sur le portfolio de Fadel SOULTANE</h1>
-        <div id="progress-bar" style="position: fixed; top: 0; left: 0; height: 5px; background: #3498db; width: 0;"></div>
-
+        <div id="progress-bar"></div>
         <nav id="navbar">
             <ul>
-                <li><a class="nav-link" href="#about">A propos</a></li>
-                <li><a class="nav-link" href="index.html">Accueil</a></li>
-              <li><a class="nav-link" href="#projects">Mes Projets</a></li>
-              <li><a class="nav-link" href="#contact">Contact</a></li>
-              <li><a class="nav-link" href="#skills">Compétence</a></li>
+                <li><a class="nav-link" href="#about" data-target="about">À propos</a></li>
+                <li><a class="nav-link" href="#projects" data-target="projects">Mes Projets</a></li>
+                <li><a class="nav-link" href="#skills" data-target="skills">Compétences</a></li>
+                <li><a class="nav-link" href="#contact" data-target="contact">Contact</a></li>
             </ul>
-          </nav>
-          <section id="about">
-            <h2>A propos de moi</h2>
-            <p>Je suis un étudiant passionné par le developpement web. J'apprend à créer des application modernes et réactives et je suis impatient de mettre mes compétence en pratique.</p>
-          </section>
+        </nav>
     </header>
-    <main >
-      <section id="projects">
-          <h2>Mes Projets</h2>
-          <p>Découvrez mes projets récents en cliquant sur le lien ci dessous:</p>
 
-          <a href="Projets.html" class="btn" target="_blank">Voir mes projets</a>
+    <main>
+        <section id="about">
+            <h2>À propos de moi</h2>
+            <p>Je suis un étudiant passionné par le développement web. J'apprends à créer des applications modernes et réactives et je suis impatient de mettre mes compétences en pratique.</p>
+        </section>
 
-          <button id="toggle-dark-mode" style="position: fixed; top: 20px; right: 20px;">🌙</button>
+        <section id="projects">
+            <h2>Mes Projets</h2>
+            <p>Découvrez mes projets récents en cliquant sur le lien ci-dessous :</p>
+            <a href="Projets.html" class="btn">Voir mes projets</a>
+        </section>
 
-          
-      </section>    
-          <section id="skills">
+        <section id="skills">
             <h2>Compétences</h2>
-            <div class="skills-container">
-                <div class="skill">
+            <ul class="skills-container">
+                <li class="skill">
                     <i class="fab fa-html5"></i>
                     <span>HTML</span>
-                </div>
-                <div class="skill">
+                </li>
+                <li class="skill">
                     <i class="fab fa-css3-alt"></i>
                     <span>CSS</span>
-                </div>
-                <div class="skill">
-                  <i class="fab fa-js"></i>
-                  <span>JavaScript</span>
-              </div>
-          </div>
-            </div>
-        </section>  
+                </li>
+                <li class="skill">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact">
+             <h2>Contact</h2>
+            <p> Vous pouvez me contacter à l'adresse email suivante</p>
+        </section>
     </main>
+
     <footer>
-      <div class="contact-info">
-        <a href="mailto:contact@soultane.com"><i class="fas fa-envelope"></i>contact@soultane.com</a>
-      </div>
+        <div class="contact-info">
+            <a href="mailto:contact@soultane.com"><i class="fas fa-envelope"></i>contact@soultane.com</a>
+        </div>
         <p>Retrouvez-moi sur les réseaux sociaux :</p>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-       <p>&copy; 2024 Fadel SOULTNE. Tous droits réservés.</p>
-  
-      </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.github.com" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Fadel SOULTANE. Tous droits réservés.</p>
+        <button id="toggle-dark-mode">🌙</button>
     </footer>
-  </body>
+
+    <script src="script.js"></script>
+</body>
 </html>

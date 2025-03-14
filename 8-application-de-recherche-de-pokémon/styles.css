@@ -80,18 +80,7 @@ p, h2 {
   margin: 10px 0;
 }
 
-/* Style pour le bouton retour en haut */
-#back-to-top:hover {
-  background-color: #555;
-}
 
-/* Style pour la modale */
-.modal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.8);
-}
 #types span {
   display: inline-block;
   padding: 5px 10px;
